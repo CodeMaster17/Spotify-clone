@@ -5,6 +5,9 @@
 .navbar  ul{
     height:10vh;
     background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .navbar img{
     height:9vh;
@@ -12,14 +15,16 @@
 }
 .navbar ul li{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
     justify-content: space-between;
 }
 .navbar ul li a{
+    
     text-decoration: none;
     color: white;
     margin:0 1vh;
+    margin-right:2vh;
 }
 /* ---------------Heading---------------- */
 .heading{
@@ -34,4 +39,16 @@
     height:80vh;
     margin-left: 20vw;
     margin-top: 20vh;
+}
+.heading .col-right{
+    margin:3vw;
+}
+.heading .col-right p{
+    color: white;
+    font-size: 9vh;
+}
+.heading .col-right .get-free{
+    height:9vh;
+    padding:1em;
+    border-radius: 2em;
 }
