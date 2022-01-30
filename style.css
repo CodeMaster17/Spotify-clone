@@ -52,3 +52,63 @@
     padding:1em;
     border-radius: 2em;
 }
+.about h2{
+    margin: 15vh 30vw;
+    font-size: 2em;
+}
+.container-music{
+    margin-top: 10vh;
+    /* width:80vw; */
+    height:100vh;
+    background: center;
+    background-image: url(img/bg-music.jpg);
+    
+
+}
+.song-img{
+    width:5em;
+    margin:2vh;
+    border:2px solid white;
+    border-radius: 4em;
+}
+.container-song{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.music-display{
+    border:2px solid white;
+    width:50vw;
+    height:14vh;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.music-display p{
+    font-size: 2em;
+}
+.music-controls{
+    margin-top: 10vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#music-range{
+    width:50vw;
+    margin:1vh 10vw;
+}
+.music-display-controls{
+    display: flex;
+    width:100vw;
+    height:20vh;
+    border:2px solid white;
+    flex-direction: row;
+}
+.music-info{
+    
+
+}

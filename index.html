@@ -1,44 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify Clone</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/cf4970b5b4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="navbar">
-        <ul>
-        <img src="img/spotify-icon2.png" alt="icon">
-            <li><a href="#">Premium</a>
-                <a href="#">Support</a>
-                <a href="#">Download</a>
-                <a href="#">|</a>
-                <a href="#">SignUp</a>
-                <a href="#">Login</a>
-            </li>
-        </ul>
+      <ul>
+        <img src="img/spotify-icon2.png" alt="icon" />
+        <li>
+          <a href="#">Premium</a>
+          <a href="#">Support</a>
+          <a href="#">Download</a>
+          <a href="#">|</a>
+          <a href="#">SignUp</a>
+          <a href="#">Login</a>
+        </li>
+      </ul>
     </div>
 
     <!-- heading-->
     <div class="heading">
-        <div class="col-left"><img src="img/mobile.jpeg" alt="mobile image"></div>
-        <div class="col-right">
-            <p>Play millions of songs and podcasts, for free</p>
-            <br>
-            <button class="get-free">
-                GET SPOTIFY FREE
-            </button>
-        </div>
+      <div class="col-left">
+        <img src="img/mobile.jpeg" alt="mobile image" />
+      </div>
+      <div class="col-right">
+        <p>Play millions of songs and podcasts, for free</p>
+        <br />
+        <button class="get-free">GET SPOTIFY FREE</button>
+      </div>
     </div>
 
-    <!-- hostel -->
-    <div class="about">
-        <h2>Why Spotify?</h2>
-        <!-- <img src = "img/play-solid.svg" alt="My Happy SVG" class="play-solid"/> -->
-        <i class="fas fa-play" style="width:104px;height:100px;"></i>
+    <div class="container-music">
+      <h2 style="color: white">All your song are here</h2>
+      <div class="container-song">
+        <div class="image-dsplay">
+          <img src="img/song.jpg" alt="#" class="song-img" />
+        </div>
+        <div class="music-display">
+          <p class="song-name">Tu ake dekhle</p>
+          <p class="time">05:24</p>
+          <i class="fas fa-2x fa-play"></i>
+        </div>
+      </div>
+      <div class="container-song">
+        <div class="image-dsplay">
+          <img src="img/song.jpg" alt="#" class="song-img" />
+        </div>
+        <div class="music-display">
+          <p class="song-name">Tu ake dekhle</p>
+          <p class="time">05:24</p>
+          <i class="fas fa-2x fa-play"></i>
+        </div>
+      </div>
+      <div class="container-song">
+        <div class="image-dsplay">
+          <img src="img/song.jpg" alt="#" class="song-img" />
+        </div>
+        <div class="music-display">
+          <p class="song-name">Tu ake dekhle</p>
+          <p class="time">05:24</p>
+          <i class="fas fa-2x fa-play"></i>
+        </div>
+      </div>
+      <div class="container-song">
+        <div class="image-display">
+          <img src="img/song.jpg" alt="#" class="song-img" />
+        </div>
+        <div class="music-display">
+          <p class="song-name">Tu ake dekhle</p>
+          <p class="time">05:24</p>
+          <i class="fas fa-2x fa-play"></i>
+        </div>
+      </div>
     </div>
-</body>
+
+    <!-- footer music controls -->
+    <div class="music-controls">
+      <div class="music-display-controls">
+        <!-- gif for music beats -->
+        <div class="gif">
+          <div
+            style="
+              width: 100%;
+              height: 20vh;
+              padding-bottom: 76%;
+              position: relative;
+              left: 40vw;
+            "
+          >
+            <iframe
+              src="https://giphy.com/embed/3orieUG75XxymzZoWc"
+              width="200vw"
+              height="100%"
+              style="position: absolute"
+              frameborder="0"
+              class="giphy-embed"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            <a
+              href="https://giphy.com/gifs/season-6-the-simpsons-6x6-3orieUG75XxymzZoWc"
+            ></a>
+          </p>
+        </div>
+        <div class="image-display">
+          <img src="img/song.jpg" alt="#" class="song-img" />
+        </div>
+      </div>
+      <div class="music-info">
+        <input type="range" name="music-range" id="music-range" />
+      </div>
+    </div>
+  </body>
 </html>
