@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
+  <script src="./index.js"></script>
   <body>
     <div class="navbar">
       <ul>
@@ -121,8 +122,13 @@
         <input type="range" name="music-range" id="music-range" />
       </div>
       <div class="controls-buttons">
-        <i class="fal fa-2x fa-backward" style="color:white"></i>
-        <i class="far fa-2x fa-pause-circle" style="color:white"></i>
+        <i class="fas fa-2x fa-backward" style="color: white;margin-right: 1vw;"></i>
+        <i class="fas fa-2x fa-caret-left" style="color:white;margin-right: 1vw;"></i>
+
+        <i class="fas fa-2x fa-play" style="color:white;" id="masterPlay"></i>
+
+        <i class="fas fa-2x fa-caret-right" style="color: white;margin-left: 1vw;"></i>
+        <i class="fas fa-2x fa-forward" style="color: white;margin-left: 1vw;"></i>
       </div>
     </div>
   </body>

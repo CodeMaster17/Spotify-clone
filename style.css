@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .navbar  ul{
     height:10vh;
@@ -106,7 +106,7 @@ body{
 }
 .music-display-controls{
     display: flex;
-    width:100vw;
+    width:99vw;
     height:20vh;
     border:2px solid white;
     flex-direction: row;
