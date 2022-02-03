@@ -92,6 +92,9 @@ body{
 .music-display p{
     font-size: 2em;
 }
+.gif-block{
+    /* border:2px solid red; */
+}
 .music-controls{
     margin-top: 10vh;
     background-color: black;
@@ -108,9 +111,15 @@ body{
     display: flex;
     width:99vw;
     height:20vh;
-    border:2px solid white;
+    /* border:2px solid white; */
     flex-direction: row;
-    /* justify-content: space-between; */
+    justify-content: space-evenly;
+}
+#gif{
+    width:35vh;
+    height:25vh;
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
 }
 .song-name-in-play{
     color:white;

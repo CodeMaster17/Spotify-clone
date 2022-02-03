@@ -2,35 +2,69 @@
 console.log("Welcome to spotify");
 
 // --------------------initialising the variables------------
-let songIndex=0;
+let songIndex = 0;
+
+const masterPlay = document.getElementById("master");
 // here Audio is a keyword
-let masterPlay=document.getElementById("masterPlay");
-let audioElement=new Audio("ekdilruba.mp3");
+let audioElement = new Audio("song.mp3");
+// audioElement.play();
 let myProgressBar=document.getElementById('music-range');
 
 // defining array of songs
-let songs =[
-    {songName:"Salam-E-Ishq", filePath:"song.mpeg",coverPath:"img/song.jpg"},
-    {songName:"Salam-E-Ishq", filePath:"song.mpeg",coverPath:"img/song.jpg"},
-    {songName:"Salam-E-Ishq", filePath:"song.mpeg",coverPath:"img/song.jpg"},
-    {songName:"Salam-E-Ishq", filePath:"song.mpeg",coverPath:"img/song.jpg"},
-    
-]
+let songs = [
+    {
+        songName: "Salam-E-Ishq",
+        filePath: "song.mpeg",
+        coverPath: "img/song.jpg",
+    },
+    {
+        songName: "Salam-E-Ishq",
+        filePath: "song.mpeg",
+        coverPath: "img/song.jpg",
+    },
+    {
+        songName: "Salam-E-Ishq",
+        filePath: "song.mpeg",
+        coverPath: "img/song.jpg",
+    },
+    {
+        songName: "Salam-E-Ishq",
+        filePath: "song.mpeg",
+        coverPath: "img/song.jpg",
+    },
+];
 // to play the son we use this element
-audioElement.play();
+console.log("master", masterPlay);
+
+
+
 
 // adding play pause click
-masterPlay.addEventListener("click",()=>{
-    // console.log("print this");
-    if(audioElement.paused || audioElement.currentTime<=0)
-    {
+masterPlay.addEventListener("click", () => {
+    // here paused & currentTime are keywords for function
+    if (audioElement.paused || audioElement.currentTime <= 0) {
+        // condition if  if the song is paused
+        console.log("if condition ran");
         audioElement.play();
-        masterPlay.classList.remove("fas fa-play");
-        masterPlay.classList.add("far fa-2x fa-pause-circle");
+        // to change icons on play plause
+        masterPlay.classList.remove("fa-play");
+        masterPlay.classList.add("fa-pause-circle");
+        gif.style.opacity = 1;
+    } else {
+        // condition if the song is in play
+        console.log("else condition ran");
+        audioElement.pause();
+        // to change icons on play plause
+        masterPlay.classList.add("fa-play");
+        masterPlay.classList.remove("fa-pause-circle");
+        gif.style.opacity = 0;
     }
-    else{
-        masterPlay.classList.add("fas fa-2x fa-play");
-        masterPlay.classList.remove("far fa-2x fa-pause-circle");
+});
 
-    }
+// accesing the time of the music
+audioElement.addEventListener('timeupdate',()=>{
+    console.log('timeupdate');
+   progress=parseInt((audioElement.currentTime/audioElement.duration)*100);
+   console.log(progress);
+    myProgressBar.value=progress;
 })
