@@ -16,22 +16,22 @@ let songItems=Array.from(document.getElementsByClassName('container-song'));
 let songs = [
     {
         songName: "BellaCiao-MoneyHeist",
-        filePath: "song/bellaciao.mpeg",
+        filePath: "song/1.mpeg",
         coverPath: "img/bellaciao.jpg",
     },
     {
         songName: "Mahabharat Title song",
-        filePath: "songs/mahabharat.mpeg",
+        filePath: "songs/2.mpeg",
         coverPath: "img/MAHABHARAT.jpg",
     },
     {
         songName: "Tu hi yaar mera- Pati Patni Or Woh",
-        filePath: "songs/yaarmera.mpeg",
+        filePath: "songs/3.mpeg",
         coverPath: "img/yaarmera.jpg",
     },
     {
         songName: "Rider-EmmaHesters",
-        filePath: "songs/rider.mpeg",
+        filePath: "songs/4.mpeg",
         coverPath: "img/rider.jpg",
     },
 ];
@@ -84,4 +84,30 @@ myProgressBar.addEventListener('change',()=>{
     myProgressBar.value=progress;
 })
 
+// -------------------CHANGING ICONS PLAY AND PAUSE WHEN WE CLICK ON THE LIST---------------------------------------
+// makeAllPlays() function will change the icons of all the other songs as play
+const makeAllPlays=()=>{
+    Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
+        element.classList.remove('fa-pause-circle');
+        element.classList.add('fa-play');
+    })
+}
 
+
+Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
+    element.addEventListener('click',(e)=>{
+        // e.target means that targeting the element which is clicked
+        console.log(e.target);
+        // calling a function
+        makeAllPlays();
+        index=parseInt(e.target.id);
+        console.log("index is:",index);
+        e.target.classList.remove('fa-play');
+        e.target.classList.add('fa-pause-circle');
+        audioElement.src='songs/$(index+1).mp3';
+        audioElement.currentTime=0;
+        audioElement.play();
+        masterPlay.classList.remove('fa-play');
+        masterPlay.classList.add('fa-pause-circle');
+    })
+})

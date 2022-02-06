@@ -78,12 +78,14 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    color:black;
 }
 .music-display{
-    border:2px solid white;
+    background-color: white;
+    border:2px solid black;
     width:50vw;
     height:14vh;
-    color:white;
+    color:black;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
